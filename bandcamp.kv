@@ -1,0 +1,29 @@
+<Interface>
+    GridLayout:
+        size: root.width, root.height
+        cols: 1
+
+        GridLayout:
+            cols: 3
+            Label:
+                text: 'URL'
+                size_hint_x: 0.2
+
+            TextInput:
+                multiline: False
+                id: Input
+            Button:
+                text: 'Confirm'
+                on_press: root.getURL()
+                size_hint_x: 0.2
+        GridLayout:
+
+            cols: 2
+            Label:
+                text: 'Current: xxxx, remaining: xx'
+                id: infoPony
+            Button:
+                text: 'next'
+                on_press: root.next()
+                size_hint_x: 0.1665
+
